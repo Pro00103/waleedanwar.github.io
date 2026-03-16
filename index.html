@@ -22,7 +22,6 @@
             --accent-cyan: #06b6d4;
         }
 
-        /* --- FIX MOBILE OVERFLOW --- */
         html, body {
             max-width: 100%;
             overflow-x: hidden;
@@ -39,7 +38,6 @@
         
         body.lang-changing { opacity: 0; }
         
-        /* Sistema Multilingua CSS */
         body.lang-it .lang-en { display: none !important; }
         body.lang-en .lang-it { display: none !important; }
         
@@ -50,7 +48,6 @@
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }
 
-        /* Sfondo animato ottimizzato */
         .bg-grid {
             background-size: 50px 50px;
             background-image: 
@@ -75,7 +72,6 @@
             transition: background-color 0.5s ease;
         }
         
-        /* Glassmorphism Premium */
         .glass-card {
             background: rgba(15, 23, 42, 0.4);
             backdrop-filter: blur(12px);
@@ -86,7 +82,6 @@
             transform-style: preserve-3d;
         }
 
-        /* Hover support detection */
         @media (hover: hover) and (pointer: fine) {
             .glass-card:hover {
                 border-color: rgba(6, 182, 212, 0.3);
@@ -96,15 +91,8 @@
             .tilt-card { transform: perspective(1000px); }
         }
 
-        /* DYNAMIC ISLAND ANIMATION */
-        #navbar {
-            transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        #nav-container {
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            width: 100%;
-        }
+        #navbar { transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        #nav-container { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; }
 
         .island-collapse {
             max-width: 300px;
@@ -115,9 +103,7 @@
             transform-origin: center;
         }
 
-        /* Scrolled State */
         #navbar.scrolled { padding-top: 0.75rem; }
-        
         #navbar.scrolled #nav-container {
             max-width: 850px;
             background: rgba(15, 23, 42, 0.85);
@@ -130,15 +116,9 @@
         }
 
         @media (min-width: 768px) {
-            #navbar.scrolled .island-collapse {
-                max-width: 0px;
-                opacity: 0;
-                padding: 0;
-                margin: 0;
-            }
+            #navbar.scrolled .island-collapse { max-width: 0px; opacity: 0; padding: 0; margin: 0; }
             #navbar.scrolled #nav-links { gap: 1.5rem; }
         }
-        
         @media (max-width: 767px) {
             #navbar.scrolled #nav-container { padding: 0.5rem 1.25rem; }
         }
@@ -160,9 +140,7 @@
             mix-blend-mode: screen;
         }
 
-        @media (max-width: 1024px) {
-            #cursor-glow { display: none !important; }
-        }
+        @media (max-width: 1024px) { #cursor-glow { display: none !important; } }
 
         .typing-cursor::after {
             content: '|';
@@ -183,21 +161,17 @@
         
         .hero-bg-blur { will-change: transform; }
 
-        /* ====================================================
-           LIGHT MODE OVERRIDES
-           ==================================================== */
+        /* LIGHT MODE */
         body.light-mode {
             --bg-dark: #f8fafc;
             background-color: var(--bg-dark);
             color: #0f172a;
         }
-
         body.light-mode .text-white:not(.keep-white) { color: #0f172a; }
         body.light-mode .text-slate-300:not(.keep-white) { color: #334155; }
         body.light-mode .text-slate-400 { color: #475569; }
         body.light-mode .text-slate-500 { color: #64748b; }
         body.light-mode .text-slate-900 { color: #ffffff; }
-
         body.light-mode .text-cyan-400 { color: #0891b2; }
         body.light-mode .text-blue-400 { color: #2563eb; }
         body.light-mode .text-emerald-400 { color: #059669; }
@@ -205,7 +179,6 @@
         body.light-mode .text-purple-400 { color: #7e22ce; }
         body.light-mode .text-cyan-200 { color: #0e7490; }
         body.light-mode .text-emerald-200 { color: #047857; }
-
         body.light-mode .bg-slate-800 { background-color: #ffffff; }
         body.light-mode .bg-slate-800\/40 { background-color: rgba(255, 255, 255, 0.6); }
         body.light-mode .bg-slate-800\/50 { background-color: rgba(255, 255, 255, 0.8); }
@@ -215,11 +188,9 @@
         body.light-mode .bg-slate-900\/90 { background-color: rgba(241, 245, 249, 0.9); }
         body.light-mode .bg-slate-900\/95 { background-color: rgba(248, 250, 252, 0.95); }
         body.light-mode .bg-\[\#03050a\] { background-color: #f1f5f9; }
-
         body.light-mode .bg-blue-500\/10 { background-color: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.4); }
         body.light-mode .bg-cyan-500\/10 { background-color: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.4); }
         body.light-mode .bg-emerald-500\/10 { background-color: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); }
-
         body.light-mode .border-[var(--bg-dark)] { border-color: #f8fafc; }
         body.light-mode .border-slate-700 { border-color: #cbd5e1; }
         body.light-mode .border-slate-700\/30 { border-color: rgba(203, 213, 225, 0.3); }
@@ -232,7 +203,6 @@
                 linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
         }
-        
         body.light-mode .glass-card {
             background: rgba(255, 255, 255, 0.75);
             border: 1px solid rgba(0, 0, 0, 0.05);
@@ -245,74 +215,47 @@
                 box-shadow: 0 20px 40px -10px rgba(6, 182, 212, 0.15);
             }
         }
-
         body.light-mode #navbar.scrolled #nav-container {
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid rgba(0, 0, 0, 0.1);
             box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
         }
-
         body.light-mode #loader { background-color: #f8fafc; }
         body.light-mode #loader-percent { color: #0f172a; }
-
         body.light-mode .from-slate-100 { --tw-gradient-from: #1e293b; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
         body.light-mode .to-slate-300 { --tw-gradient-to: #0f172a; }
         body.light-mode .hover\:from-white:hover { --tw-gradient-from: #000000; }
         body.light-mode .hover\:to-white:hover { --tw-gradient-to: #000000; }
-        
-        body.light-mode .keep-white,
-        body.light-mode .keep-white * {
-            color: #ffffff !important;
-        }
+        body.light-mode .keep-white, body.light-mode .keep-white * { color: #ffffff !important; }
 
         @media (hover: hover) and (pointer: fine) {
             body.light-mode .group:hover .group-hover\:text-white,
             body.light-mode .group\/item:hover .group-hover\/item\:text-white,
             body.light-mode .group\/box:hover .group-hover\/box\:text-white,
-            body.light-mode .hover\:bg-\[\#0A66C2\]:hover {
-                color: #ffffff !important;
-            }
+            body.light-mode .hover\:bg-\[\#0A66C2\]:hover { color: #ffffff !important; }
         }
-
         body.light-mode #mobile-menu { background-color: rgba(255, 255, 255, 0.98); }
         body.light-mode .mobile-link { color: #0f172a; }
         body.light-mode .mobile-link:hover { color: var(--accent-cyan); }
-        
         #cursor-glow { mix-blend-mode: normal; }
         body.light-mode #cursor-glow { mix-blend-mode: multiply; opacity: 0.5; }
 
-        /* TERMINAL CUSTOM SCROLLBAR */
         #terminal-body::-webkit-scrollbar { width: 4px; }
         #terminal-body::-webkit-scrollbar-track { background: transparent; }
         #terminal-body::-webkit-scrollbar-thumb { background: #22c55e; border-radius: 4px; }
 
-        /* ==========================================
-           EASTER EGG TERMINAL EFFECTS
-           ========================================== */
-        
-        /* Effetto Matrix */
         .matrix-mode {
             background-color: #000000 !important;
             color: #00ff41 !important;
             text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
             font-family: 'Courier New', Courier, monospace;
         }
-        .matrix-mode input {
+        .matrix-mode input { color: #00ff41 !important; text-shadow: 0 0 5px rgba(0, 255, 65, 0.5); }
+        .matrix-mode span.text-blue-400, .matrix-mode span.text-cyan-400, 
+        .matrix-mode span.text-slate-300, .matrix-mode span.text-red-400, .matrix-mode span.text-red-500 {
             color: #00ff41 !important;
-            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
         }
-        .matrix-mode span.text-blue-400, 
-        .matrix-mode span.text-cyan-400, 
-        .matrix-mode span.text-slate-300,
-        .matrix-mode span.text-red-400,
-        .matrix-mode span.text-red-500 {
-            color: #00ff41 !important; /* Forza tutto verde nella matrix mode */
-        }
-
-        /* Effetto Schermata Hacker (sudo rm -rf /) */
-        #hacker-screen {
-            text-shadow: 0 0 5px rgba(0, 255, 65, 0.6);
-        }
+        #hacker-screen { text-shadow: 0 0 5px rgba(0, 255, 65, 0.6); }
     </style>
 </head>
 <body class="lang-it antialiased selection:bg-cyan-500 selection:text-white no-scroll relative">
@@ -371,6 +314,10 @@
                     <span class="lang-it">Formazione</span><span class="lang-en">Education</span>
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
+                <a href="#certifications" class="hover:text-cyan-400 transition-colors relative group py-1">
+                    <span class="lang-it">Certificati</span><span class="lang-en">Certificates</span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a href="#projects" class="hover:text-cyan-400 transition-colors relative group py-1">
                     <span class="lang-it">Progetti</span><span class="lang-en">Projects</span>
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
@@ -407,6 +354,7 @@
         <a href="#skills" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors"><span class="lang-it">Competenze</span><span class="lang-en">Skills</span></a>
         <a href="#experience" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors"><span class="lang-it">Esperienza</span><span class="lang-en">Experience</span></a>
         <a href="#education" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors"><span class="lang-it">Formazione</span><span class="lang-en">Education</span></a>
+        <a href="#certifications" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors"><span class="lang-it">Certificati</span><span class="lang-en">Certificates</span></a>
         <a href="#projects" class="mobile-link text-slate-300 hover:text-cyan-400 transition-colors"><span class="lang-it">Progetti</span><span class="lang-en">Projects</span></a>
         <a href="mailto:Waleedanwar039@gmail.com" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white keep-white rounded-full mt-6 text-lg shadow-lg"><span class="lang-it">Contattami</span><span class="lang-en">Contact Me</span></a>
     </div>
@@ -725,6 +673,85 @@
             </div>
         </section>
 
+        <section id="certifications" class="py-16 md:py-24 relative z-10">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent"></div>
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-cyan-500 font-mono tracking-widest uppercase text-xs md:text-sm mb-2"># Badges</h2>
+                    <h3 class="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white"><span class="lang-it">Certificazioni & Corsi</span><span class="lang-en">Certifications & Courses</span></h3>
+                    <p class="text-slate-400 mt-4 text-sm md:text-base font-light"><span class="lang-it">Clicca sulle card per visualizzare i certificati ufficiali.</span><span class="lang-en">Click on the cards to view the official certificates.</span></p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    
+                    <div class="glass-card flex flex-col p-6 md:p-8 rounded-[2rem] cert-item opacity-0 translate-y-10 group md:hover:-translate-y-2 transition-all duration-300 md:hover:shadow-[0_15px_30px_rgba(255,153,0,0.15)] md:hover:border-[#ff9900]/50 tilt-card h-full">
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-[#ff9900]/10 border border-[#ff9900]/30 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-[#ff9900] group-hover:text-white transition-all duration-300 text-[#ff9900]">
+                            <i class="fa-brands fa-aws"></i>
+                        </div>
+                        <div class="mb-6 flex-1">
+                            <span class="inline-block px-3 py-1 bg-slate-800/80 border border-slate-600 rounded-lg text-[10px] md:text-xs font-mono font-semibold text-slate-300 mb-3">Amazon Web Services</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white leading-tight">AWS Cloud Practitioner</h4>
+                        </div>
+                        <div class="pt-4 border-t border-slate-700/50 mt-auto">
+                            <span class="inline-flex items-center text-xs font-bold text-[#ff9900] bg-[#ff9900]/10 px-3 py-1.5 rounded-full border border-[#ff9900]/20"><i class="fa-solid fa-spinner fa-spin mr-2"></i> <span class="lang-it">In corso</span><span class="lang-en">In progress</span></span>
+                        </div>
+                    </div>
+
+                    <button data-cert="Cisco_Cybersecurity.jpg" data-title="Introduction to Cybersecurity" class="view-cert-btn glass-card flex flex-col p-6 md:p-8 rounded-[2rem] cert-item opacity-0 translate-y-10 group md:hover:-translate-y-2 transition-all duration-300 md:hover:shadow-[0_15px_30px_rgba(16,185,129,0.15)] md:hover:border-emerald-500/50 tilt-card h-full cursor-pointer relative overflow-hidden text-left border border-slate-700/50 outline-none w-full">
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity text-emerald-400">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 text-emerald-400">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="mb-6 flex-1">
+                            <span class="inline-block px-3 py-1 bg-slate-800/80 border border-slate-600 rounded-lg text-[10px] md:text-xs font-mono font-semibold text-slate-300 mb-3">Cisco Networking Academy</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white leading-tight">Introduction to Cybersecurity</h4>
+                        </div>
+                        <div class="pt-4 border-t border-slate-700/50 mt-auto flex justify-between items-center w-full">
+                            <span class="inline-flex items-center text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20"><i class="fa-solid fa-check-circle mr-2"></i> Ottenuta</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Lug 2025</span>
+                        </div>
+                    </button>
+
+                    <button data-cert="Cisco_IoT.jpg" data-title="Introduction to IoT" class="view-cert-btn glass-card flex flex-col p-6 md:p-8 rounded-[2rem] cert-item opacity-0 translate-y-10 group md:hover:-translate-y-2 transition-all duration-300 md:hover:shadow-[0_15px_30px_rgba(6,182,212,0.15)] md:hover:border-cyan-500/50 tilt-card h-full cursor-pointer relative overflow-hidden text-left border border-slate-700/50 outline-none w-full">
+                         <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-cyan-500/10 border border-cyan-500/30 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300 text-cyan-400">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="mb-6 flex-1">
+                            <span class="inline-block px-3 py-1 bg-slate-800/80 border border-slate-600 rounded-lg text-[10px] md:text-xs font-mono font-semibold text-slate-300 mb-3">Cisco Networking Academy</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white leading-tight">Introduction to IoT</h4>
+                        </div>
+                        <div class="pt-4 border-t border-slate-700/50 mt-auto flex justify-between items-center w-full">
+                            <span class="inline-flex items-center text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20"><i class="fa-solid fa-check-circle mr-2"></i> Ottenuta</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Mar 2026</span>
+                        </div>
+                    </button>
+
+                    <button data-cert="Cisco_AI.jpg" data-title="Introduction to Modern AI" class="view-cert-btn glass-card flex flex-col p-6 md:p-8 rounded-[2rem] cert-item opacity-0 translate-y-10 group md:hover:-translate-y-2 transition-all duration-300 md:hover:shadow-[0_15px_30px_rgba(168,85,247,0.15)] md:hover:border-purple-500/50 tilt-card h-full cursor-pointer relative overflow-hidden text-left border border-slate-700/50 outline-none w-full">
+                        <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity text-purple-400">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="w-12 h-12 md:w-14 md:h-14 bg-purple-500/10 border border-purple-500/30 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300 text-purple-400">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="mb-6 flex-1">
+                            <span class="inline-block px-3 py-1 bg-slate-800/80 border border-slate-600 rounded-lg text-[10px] md:text-xs font-mono font-semibold text-slate-300 mb-3">Cisco Networking Academy</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white leading-tight">Introduction to Modern AI</h4>
+                        </div>
+                        <div class="pt-4 border-t border-slate-700/50 mt-auto flex justify-between items-center w-full">
+                            <span class="inline-flex items-center text-xs font-bold text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20"><i class="fa-solid fa-check-circle mr-2"></i> Ottenuta</span>
+                            <span class="text-[10px] text-slate-400 font-mono">Mar 2026</span>
+                        </div>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="py-16 md:py-24 relative z-10">
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent"></div>
             <div class="max-w-7xl mx-auto px-4">
@@ -854,6 +881,26 @@
             </div>
         </footer>
 
+        <div id="cert-modal" class="fixed inset-0 z-[300] hidden items-center justify-center bg-black/90 backdrop-blur-sm opacity-0 transition-opacity duration-300 p-4 md:p-8">
+            <div class="relative w-full max-w-5xl h-full max-h-[90vh] flex flex-col bg-slate-900 rounded-2xl border border-slate-700 shadow-[0_0_50px_rgba(6,182,212,0.2)] overflow-hidden transform scale-95 transition-transform duration-300" id="cert-modal-content">
+                <div class="flex justify-between items-center p-4 border-b border-slate-700 bg-slate-800 shrink-0">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-certificate text-cyan-400"></i>
+                        <h4 class="text-white font-bold font-mono text-sm md:text-base" id="cert-modal-title">Certificato Ufficiale</h4>
+                    </div>
+                    <button id="close-cert-modal" class="text-slate-400 hover:text-white hover:bg-slate-700 w-8 h-8 flex items-center justify-center rounded-full transition-colors focus:outline-none">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+                <div class="flex-1 w-full h-full bg-[#0a0f1a] relative flex items-center justify-center p-2 md:p-6 overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center -z-10" id="cert-loader">
+                        <i class="fa-solid fa-spinner fa-spin text-4xl text-cyan-500/50"></i>
+                    </div>
+                    <img id="cert-image" src="" alt="Certificato Cisco" class="max-w-full max-h-full object-contain relative z-10 hidden rounded-md shadow-2xl border border-slate-700/50">
+                </div>
+            </div>
+        </div>
+
         <div id="terminal-overlay" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 transition-opacity duration-300 px-4">
             <div class="w-full max-w-2xl bg-[#0f172a] border border-slate-700 rounded-xl shadow-[0_0_50px_rgba(6,182,212,0.15)] overflow-hidden flex flex-col font-mono text-sm transform scale-95 transition-transform duration-300" id="terminal-window">
                 <div class="bg-slate-800 px-4 py-3 flex items-center justify-between border-b border-slate-700 shadow-md">
@@ -885,7 +932,7 @@ System Online. Root privileges granted.</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <script>
-        // Logica Dark / Light Mode (con salvataggio preferenza)
+        // Logica Dark / Light Mode
         const themeToggleBtn = document.getElementById('theme-toggle');
         const darkIcon = themeToggleBtn.querySelector('.dark-icon');
         const lightIcon = themeToggleBtn.querySelector('.light-icon');
@@ -912,13 +959,12 @@ System Online. Root privileges granted.</div>
             }
         });
 
-        // Transizione di Lingua Soft
+        // Transizione Lingua
         const langToggle = document.getElementById('lang-toggle');
         let currentLang = 'it';
 
         langToggle.addEventListener('click', () => {
             document.body.classList.add('lang-changing');
-            
             setTimeout(() => {
                 document.body.classList.remove(`lang-${currentLang}`);
                 currentLang = currentLang === 'it' ? 'en' : 'it';
@@ -936,9 +982,8 @@ System Online. Root privileges granted.</div>
             }, 300);
         });
 
-        // Logica Dynamic Island 
+        // Navbar Scroll
         const navbar = document.getElementById('navbar');
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 30) {
                 navbar.classList.add('scrolled');
@@ -947,7 +992,7 @@ System Online. Root privileges granted.</div>
             }
         });
 
-        // Typing Effect Hero
+        // Typing Effect
         const textsIT = ["System Administrator", "Appassionato Cloud", "Problem Solver", "Studente IT"];
         const textsEN = ["System Administrator", "Cloud Enthusiast", "Problem Solver", "IT Student"];
         let texts = textsIT;
@@ -970,26 +1015,20 @@ System Online. Root privileges granted.</div>
             }
         }
 
-        // Effetto cursore limitato al desktop
+        // Mouse Glow
         const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-        
         if (!isTouchDevice && window.innerWidth > 1024) {
             const cursorGlow = document.getElementById('cursor-glow');
             const heroBg1 = document.getElementById('hero-bg-1');
             const heroBg2 = document.getElementById('hero-bg-2');
-            
             let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
             let cursorX = mouseX, cursorY = mouseY;
 
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
+            document.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
 
             function animateCursor() {
                 cursorX += (mouseX - cursorX) * 0.15;
                 cursorY += (mouseY - cursorY) * 0.15;
-                
                 cursorGlow.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
 
                 if(window.scrollY < window.innerHeight) {
@@ -1003,7 +1042,7 @@ System Online. Root privileges granted.</div>
             animateCursor();
         }
 
-        // Effetto Tilt Card 3D limitato al desktop
+        // Tilt Card
         if (!isTouchDevice) {
             const tiltCards = document.querySelectorAll('.tilt-card');
             tiltCards.forEach(card => {
@@ -1023,7 +1062,7 @@ System Online. Root privileges granted.</div>
             });
         }
 
-        // Mobile Menu Logic
+        // Mobile Menu
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -1038,20 +1077,13 @@ System Online. Root privileges granted.</div>
                 icon.classList.replace('fa-xmark', 'fa-bars');
             }
         }
-
         menuBtn.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
-        // GSAP Animations
+        // GSAP
         gsap.registerPlugin(ScrollTrigger);
 
-        const tlLoader = gsap.timeline({
-            onComplete: () => { 
-                document.body.classList.remove('no-scroll'); 
-                typeText(); 
-            }
-        });
-
+        const tlLoader = gsap.timeline({ onComplete: () => { document.body.classList.remove('no-scroll'); typeText(); } });
         let counter = { value: 0 };
         tlLoader.to(counter, {
             value: 100, duration: 1.2, roundProps: "value", ease: "power4.inOut",
@@ -1063,36 +1095,81 @@ System Online. Root privileges granted.</div>
         .to('.hero-elem', { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: "power3.out" }, "-=0.5");
 
         const triggerStart = isTouchDevice ? "top 90%" : "top 85%";
-
         gsap.to(".section-title", { scrollTrigger: { trigger: "#profile", start: triggerStart }, opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power3.out" });
         gsap.to(".section-content", { scrollTrigger: { trigger: "#profile", start: "top 80%" }, opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power3.out" });
         gsap.to(".skill-col", { scrollTrigger: { trigger: "#skills", start: triggerStart }, opacity: 1, x: 0, duration: 0.8, stagger: 0.15, ease: "power4.out" });
         gsap.to(".exp-item", { scrollTrigger: { trigger: "#experience", start: triggerStart }, opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
         gsap.to(".edu-item", { scrollTrigger: { trigger: "#education", start: triggerStart }, opacity: 1, duration: 0.8, stagger: 0.2, ease: "back.out(1.2)" });
+        gsap.to(".cert-item", { scrollTrigger: { trigger: "#certifications", start: triggerStart }, opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" });
         gsap.to(".proj-item", { scrollTrigger: { trigger: "#projects", start: triggerStart }, opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out" });
         gsap.to(".cta-item", { scrollTrigger: { trigger: "#resume-cta", start: triggerStart }, opacity: 1, y: 0, duration: 0.8, ease: "power3.out" });
 
-        // Animazione Numeri Competenze & Barre
         gsap.utils.toArray('.group\\/skill').forEach(skillGroup => {
             let bar = skillGroup.querySelector('.skill-progress');
             let percentText = skillGroup.querySelector('.skill-percent');
             let targetWidth = bar.getAttribute('data-width');
             let targetValue = parseInt(percentText.getAttribute('data-target'));
             let currentData = { val: 0 };
-
-            gsap.timeline({
-                scrollTrigger: { trigger: skillGroup, start: "top 95%" }
-            })
+            gsap.timeline({ scrollTrigger: { trigger: skillGroup, start: "top 95%" } })
             .fromTo(bar, { width: "0%" }, { width: targetWidth, duration: 1.2, ease: "power4.out" }, 0)
-            .to(currentData, {
-                val: targetValue, duration: 1.2, ease: "power4.out", roundProps: "val",
-                onUpdate: () => { percentText.innerText = currentData.val + "%"; }
-            }, 0);
+            .to(currentData, { val: targetValue, duration: 1.2, ease: "power4.out", roundProps: "val", onUpdate: () => { percentText.innerText = currentData.val + "%"; } }, 0);
         });
 
-        // ==========================================
-        // EASTER EGG: INTERACTIVE TERMINAL
-        // ==========================================
+        // MODAL CERTIFICATI LOGIC
+        const certModal = document.getElementById('cert-modal');
+        const certModalContent = document.getElementById('cert-modal-content');
+        const certImage = document.getElementById('cert-image');
+        const certImageLoader = document.getElementById('cert-loader');
+        const closeCertBtn = document.getElementById('close-cert-modal');
+        const certModalTitle = document.getElementById('cert-modal-title');
+        const viewCertBtns = document.querySelectorAll('.view-cert-btn');
+
+        viewCertBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const imgFile = btn.getAttribute('data-cert');
+                const title = btn.getAttribute('data-title');
+                
+                certModalTitle.innerText = title;
+                certImage.classList.add('hidden');
+                certImageLoader.classList.remove('hidden');
+                
+                certImage.src = imgFile;
+                certImage.onload = () => {
+                    certImageLoader.classList.add('hidden');
+                    certImage.classList.remove('hidden');
+                };
+                
+                certModal.classList.remove('hidden');
+                certModal.classList.add('flex');
+                
+                setTimeout(() => {
+                    certModal.classList.remove('opacity-0');
+                    certModal.classList.add('opacity-100');
+                    certModalContent.classList.remove('scale-95');
+                    certModalContent.classList.add('scale-100');
+                    document.body.classList.add('no-scroll');
+                }, 10);
+            });
+        });
+
+        function closeCertModal() {
+            certModal.classList.remove('opacity-100');
+            certModal.classList.add('opacity-0');
+            certModalContent.classList.remove('scale-100');
+            certModalContent.classList.add('scale-95');
+            
+            setTimeout(() => {
+                certModal.classList.add('hidden');
+                certModal.classList.remove('flex');
+                certImage.src = ''; 
+                document.body.classList.remove('no-scroll');
+            }, 300);
+        }
+
+        closeCertBtn.addEventListener('click', closeCertModal);
+        certModal.addEventListener('click', (e) => { if (e.target === certModal) closeCertModal(); });
+
+        // TERMINAL LOGIC
         const terminalOverlay = document.getElementById('terminal-overlay');
         const terminalWindow = document.getElementById('terminal-window');
         const terminalInput = document.getElementById('terminal-input');
@@ -1103,8 +1180,6 @@ System Online. Root privileges granted.</div>
         function openTerminal() {
             terminalOverlay.classList.remove('hidden');
             terminalOverlay.classList.add('flex');
-            
-            // Timeout per animazione
             setTimeout(() => {
                 terminalOverlay.classList.remove('opacity-0');
                 terminalOverlay.classList.add('opacity-100');
@@ -1119,65 +1194,44 @@ System Online. Root privileges granted.</div>
             terminalOverlay.classList.add('opacity-0');
             terminalWindow.classList.remove('scale-100');
             terminalWindow.classList.add('scale-95');
-            
             setTimeout(() => {
                 terminalOverlay.classList.add('hidden');
                 terminalOverlay.classList.remove('flex');
-            }, 300); // Wait for transition
+            }, 300);
         }
 
-        // Listeners for Opening/Closing
         document.addEventListener('keydown', (e) => {
-            if (e.key === '`' || e.key === '\\') { // Backtick trigger
+            if (e.key === '`' || e.key === '\\') {
                 e.preventDefault();
-                if (terminalOverlay.classList.contains('hidden')) {
-                    openTerminal();
-                } else {
-                    closeTerminal();
-                }
+                if (terminalOverlay.classList.contains('hidden')) openTerminal();
+                else closeTerminal();
             }
         });
 
-        secretTrigger.addEventListener('click', () => {
-            openTerminal();
-        });
-
+        secretTrigger.addEventListener('click', openTerminal);
         closeTerminalBtn.addEventListener('click', closeTerminal);
-        
-        // Chiudi cliccando fuori
-        terminalOverlay.addEventListener('click', (e) => {
-            if (e.target === terminalOverlay) closeTerminal();
-        });
+        terminalOverlay.addEventListener('click', (e) => { if (e.target === terminalOverlay) closeTerminal(); });
 
-        // Helper per scrollare in basso il terminale
         function scrollToBottom() {
             const termBody = document.getElementById('terminal-body');
             termBody.scrollTop = termBody.scrollHeight;
         }
 
-        // Command Logic
         terminalInput.addEventListener('keydown', function(e) {
             if (e.key === 'Enter') {
                 const command = this.value.trim();
                 if (!command) return;
-                
-                this.value = ''; // clear input
-
-                // Append command to output
+                this.value = ''; 
                 const cmdLine = document.createElement('div');
                 cmdLine.innerHTML = `<span class="text-blue-400">waleed@admin:~$</span> <span class="text-white">${command}</span>`;
                 terminalOutput.appendChild(cmdLine);
-
-                // Process Command
                 const response = processCommand(command.toLowerCase(), command);
-                
                 if (response) {
                     const resLine = document.createElement('div');
                     resLine.className = "mt-1 mb-3 text-slate-300";
                     resLine.innerHTML = response;
                     terminalOutput.appendChild(resLine);
                 }
-
                 scrollToBottom();
             }
         });
@@ -1185,10 +1239,8 @@ System Online. Root privileges granted.</div>
         function processCommand(cmd, originalCmd) {
             const args = cmd.split(' ');
             const mainCmd = args[0];
-
             switch(mainCmd) {
-                case 'help':
-                    return `Comandi disponibili:
+                case 'help': return `Comandi disponibili:
   <span class="text-cyan-400">whoami</span>    - Mostra informazioni utente
   <span class="text-cyan-400">skills</span>    - Elenca le competenze tecniche
   <span class="text-cyan-400">clear</span>     - Pulisce l'output del terminale
@@ -1196,28 +1248,19 @@ System Online. Root privileges granted.</div>
   <span class="text-cyan-400">theme</span>     - Cambia tema (es. theme light, theme dark)
   <span class="text-cyan-400">matrix</span>    - Inizializza protocollo Matrix
   <span class="text-cyan-400">exit</span>      - Chiude il terminale`;
-                
-                case 'whoami':
-                    return 'Waleed Anwar - System Administrator & Computer Engineering Student.<br>Appassionato di reti, cloud architecture e problem-solving.';
-                
-                case 'skills':
-                    return `Caricamento moduli in corso...
+                case 'whoami': return 'Waleed Anwar - System Administrator & Computer Engineering Student.<br>Appassionato di reti, cloud architecture e problem-solving.';
+                case 'skills': return `Caricamento moduli in corso...
 [<span class="text-green-400">OK</span>] C++ & Visual Basic
 [<span class="text-green-400">OK</span>] HTML / CSS
 [<span class="text-green-400">OK</span>] MS SQL Server
 [<span class="text-green-400">OK</span>] AWS Cloud (Practitioner in progress)
 [<span class="text-green-400">OK</span>] Networking & IT Security`;
-                
-                case 'clear':
-                    terminalOutput.innerHTML = '';
-                    return '';
-                
+                case 'clear': terminalOutput.innerHTML = ''; return '';
                 case 'theme':
                     if (args[1] === 'light' || args[1] === 'dark') {
                         const isLightMode = document.body.classList.contains('light-mode');
                         const darkIcon = document.querySelector('.dark-icon');
                         const lightIcon = document.querySelector('.light-icon');
-                        
                         if (args[1] === 'light' && !isLightMode) {
                             document.body.classList.add('light-mode');
                             darkIcon.classList.add('hidden');
@@ -1234,38 +1277,24 @@ System Online. Root privileges granted.</div>
                         return `Il tema è già impostato su ${args[1]}.`;
                     }
                     return 'Sintassi corretta: theme [light|dark]';
-
-                case 'ping':
-                    let target = args[1] || '127.0.0.1';
-                    simulatePing(target);
-                    return ''; // Output gestito in asincrono
-
+                case 'ping': let target = args[1] || '127.0.0.1'; simulatePing(target); return ''; 
                 case 'matrix':
                     document.getElementById('terminal-body').classList.toggle('matrix-mode');
                     return document.getElementById('terminal-body').classList.contains('matrix-mode') 
-                        ? 'Wake up, Neo... The Matrix has you.' 
-                        : 'Protocollo Matrix disattivato.';
-
+                        ? 'Wake up, Neo... The Matrix has you.' : 'Protocollo Matrix disattivato.';
                 case 'sudo':
                     if (args[1] === 'rm' && args[2] === '-rf' && args[3] === '/') {
                         triggerHackerScreen();
                         return '<span class="text-red-500 font-bold">CRITICAL ERROR: Attacco di sistema rilevato...</span>';
                     }
                     return '<span class="text-red-400">Accesso negato. Bel tentativo, ma non sei nel file sudoers. L\'incidente sarà riportato.</span>';
-                
-                case 'exit':
-                    closeTerminal();
-                    return 'Disconnessione in corso...';
-                
-                default:
-                    return `<span class="text-red-400">Comando non trovato: ${originalCmd}</span>. Digita 'help' per la lista dei comandi.`;
+                case 'exit': closeTerminal(); return 'Disconnessione in corso...';
+                default: return `<span class="text-red-400">Comando non trovato: ${originalCmd}</span>. Digita 'help' per la lista dei comandi.`;
             }
         }
 
-        // --- EASTER EGG ASYNC FUNCTIONS ---
-
         function simulatePing(target) {
-            terminalInput.disabled = true; // Blocca input durante il ping
+            terminalInput.disabled = true; 
             let count = 0;
             const pingInterval = setInterval(() => {
                 const time = (Math.random() * 10 + 1).toFixed(1);
@@ -1274,7 +1303,6 @@ System Online. Root privileges granted.</div>
                 line.innerHTML = `64 bytes da ${target}: icmp_seq=${count} ttl=64 time=${time} ms`;
                 terminalOutput.appendChild(line);
                 scrollToBottom();
-                
                 count++;
                 if (count >= 4) {
                     clearInterval(pingInterval);
@@ -1294,54 +1322,36 @@ System Online. Root privileges granted.</div>
         function triggerHackerScreen() {
             terminalInput.disabled = true;
             const hackerScreen = document.getElementById('hacker-screen');
-            
-            // Ritarda un istante per dare l'effetto drammatico
             setTimeout(() => {
                 hackerScreen.classList.remove('hidden');
                 hackerScreen.classList.add('flex');
                 hackerScreen.innerHTML = '';
-                
                 const scriptLines = [
-                    "Bypassing mainframe security...",
-                    "Accessing encrypted neural net...",
-                    "Decrypting passwords... [████████░░] 80%",
-                    "DOWNLOADING CLASSIFIED DATA...",
-                    "Injecting payload: trojan_v4.exe",
-                    "Root access granted.",
-                    "Disabling firewall...",
-                    "Initiating system override...",
-                    "Connection established: 192.168.1.104",
-                    "Data breach in progress...",
-                    "Extracting /etc/shadow...",
-                    "Extracting /etc/passwd..."
+                    "Bypassing mainframe security...", "Accessing encrypted neural net...",
+                    "Decrypting passwords... [████████░░] 80%", "DOWNLOADING CLASSIFIED DATA...",
+                    "Injecting payload: trojan_v4.exe", "Root access granted.",
+                    "Disabling firewall...", "Initiating system override...",
+                    "Connection established: 192.168.1.104", "Data breach in progress...",
+                    "Extracting /etc/shadow...", "Extracting /etc/passwd..."
                 ];
-
                 let lineCount = 0;
                 const maxLines = 50;
-
                 const hackInterval = setInterval(() => {
                     const line = document.createElement('div');
-                    
-                    // Alterna tra frasi fittizie e stringhe esadecimali casuali per fare scena
                     if (Math.random() > 0.4) {
                         line.innerText = "0x" + Math.random().toString(16).substr(2, 8).toUpperCase() + " " + scriptLines[Math.floor(Math.random() * scriptLines.length)];
                     } else {
                         line.innerText = Array.from({length: 8}, () => Math.random().toString(36).substr(2, 10)).join(' ');
                     }
-                    
                     hackerScreen.appendChild(line);
-                    hackerScreen.scrollTop = hackerScreen.scrollHeight; // Auto-scroll
+                    hackerScreen.scrollTop = hackerScreen.scrollHeight; 
                     lineCount++;
-
                     if (lineCount > maxLines) {
                         clearInterval(hackInterval);
-                        
-                        // Dopo l'attacco, attendi 1 secondo e resetta
                         setTimeout(() => {
                             hackerScreen.classList.add('hidden');
                             hackerScreen.classList.remove('flex');
-                            hackerScreen.innerHTML = ''; // pulizia
-
+                            hackerScreen.innerHTML = ''; 
                             const resLine = document.createElement('div');
                             resLine.className = "mt-3 mb-3 text-green-400 font-bold text-lg";
                             resLine.innerHTML = "Scherzetto! Sistema ripristinato. Nessun dato è stato rubato. (Forse...) 🕵️‍♂️";
@@ -1351,7 +1361,7 @@ System Online. Root privileges granted.</div>
                             terminalInput.focus();
                         }, 1200);
                     }
-                }, 60); // Scorrimento super rapido
+                }, 60); 
             }, 500);
         }
     </script>
