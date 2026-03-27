@@ -163,13 +163,16 @@
         
         .hero-bg-blur { will-change: transform; }
 
-        /* LIGHT MODE */
+        /* ==========================================
+           LIGHT MODE OVERRIDES E FIX
+           ========================================== */
         body.light-mode {
             --bg-dark: #f8fafc;
             background-color: var(--bg-dark);
             color: #0f172a;
         }
         body.light-mode .text-white:not(.keep-white) { color: #0f172a; }
+        body.light-mode .text-slate-200:not(.keep-white) { color: #1e293b; }
         body.light-mode .text-slate-300:not(.keep-white) { color: #334155; }
         body.light-mode .text-slate-400 { color: #475569; }
         body.light-mode .text-slate-500 { color: #64748b; }
@@ -181,11 +184,23 @@
         body.light-mode .text-purple-400 { color: #7e22ce; }
         body.light-mode .text-cyan-200 { color: #0e7490; }
         body.light-mode .text-emerald-200 { color: #047857; }
+        
+        /* Fix tag e colori di accento */
+        body.light-mode .text-blue-300 { color: #2563eb; }
+        body.light-mode .text-cyan-300 { color: #0891b2; }
+        body.light-mode .text-emerald-300 { color: #059669; }
+        body.light-mode .text-green-300 { color: #16a34a; }
+        body.light-mode .text-purple-300 { color: #7e22ce; }
+        body.light-mode .text-red-400 { color: #dc2626; }
+        body.light-mode .text-red-500 { color: #b91c1c; }
+
         body.light-mode .bg-slate-800 { background-color: #ffffff; }
         body.light-mode .bg-slate-800\/40 { background-color: rgba(255, 255, 255, 0.6); }
         body.light-mode .bg-slate-800\/50 { background-color: rgba(255, 255, 255, 0.8); }
         body.light-mode .bg-slate-800\/80 { background-color: rgba(255, 255, 255, 0.85); }
         body.light-mode .bg-slate-800\/90 { background-color: rgba(255, 255, 255, 0.95); }
+        body.light-mode .bg-slate-900\/30 { background-color: rgba(241, 245, 249, 0.6); }
+        body.light-mode .bg-slate-900\/50 { background-color: rgba(255, 255, 255, 0.7); }
         body.light-mode .bg-slate-900\/80 { background-color: rgba(241, 245, 249, 0.8); }
         body.light-mode .bg-slate-900\/90 { background-color: rgba(241, 245, 249, 0.9); }
         body.light-mode .bg-slate-900\/95 { background-color: rgba(248, 250, 252, 0.95); }
@@ -193,12 +208,28 @@
         body.light-mode .bg-blue-500\/10 { background-color: rgba(59, 130, 246, 0.15); border-color: rgba(59, 130, 246, 0.4); }
         body.light-mode .bg-cyan-500\/10 { background-color: rgba(6, 182, 212, 0.15); border-color: rgba(6, 182, 212, 0.4); }
         body.light-mode .bg-emerald-500\/10 { background-color: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); }
+        
         body.light-mode .border-[var(--bg-dark)] { border-color: #f8fafc; }
         body.light-mode .border-slate-700 { border-color: #cbd5e1; }
         body.light-mode .border-slate-700\/30 { border-color: rgba(203, 213, 225, 0.3); }
         body.light-mode .border-slate-700\/50 { border-color: rgba(203, 213, 225, 0.5); }
         body.light-mode .border-slate-600 { border-color: #cbd5e1; }
         body.light-mode .border-slate-800\/80 { border-color: #e2e8f0; }
+
+        /* Fix ombre e barre di scorrimento */
+        body.light-mode .shadow-inner.bg-slate-800 { background-color: #e2e8f0; }
+        body.light-mode .shadow-\[0_0_15px_rgba\(0\,0\,0\,0\.5\)\] { box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); }
+
+        /* Fix Testo Gradients Hero */
+        body.light-mode .from-cyan-400 { --tw-gradient-from: #0891b2; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+        body.light-mode .via-blue-500 { --tw-gradient-stops: var(--tw-gradient-from), #2563eb, var(--tw-gradient-to); }
+        body.light-mode .to-purple-500 { --tw-gradient-to: #7e22ce; }
+
+        /* Fix Input Form */
+        body.light-mode input::placeholder,
+        body.light-mode textarea::placeholder { color: #64748b; }
+        body.light-mode input,
+        body.light-mode textarea { color: #0f172a; border-color: #cbd5e1; }
 
         body.light-mode .bg-grid {
             background-image: 
@@ -241,6 +272,22 @@
         body.light-mode .mobile-link:hover { color: var(--accent-cyan); }
         #cursor-glow { mix-blend-mode: normal; }
         body.light-mode #cursor-glow { mix-blend-mode: multiply; opacity: 0.5; }
+
+        /* Protezione Modali e Terminale per Light Mode */
+        body.light-mode #terminal-window .bg-slate-800 { background-color: #1e293b; }
+        body.light-mode #terminal-window .text-slate-400 { color: #94a3b8; }
+        body.light-mode #terminal-output .text-white { color: #ffffff !important; }
+        body.light-mode #terminal-output .text-slate-300 { color: #cbd5e1 !important; }
+        body.light-mode #terminal-output .text-cyan-400 { color: #22d3ee !important; }
+        body.light-mode #terminal-output .text-blue-400 { color: #60a5fa !important; }
+        body.light-mode #terminal-output .text-red-400 { color: #f87171 !important; }
+        
+        body.light-mode #cert-modal .bg-slate-800 { background-color: #1e293b; }
+        body.light-mode #cert-modal .bg-slate-900 { background-color: #0f172a; }
+        body.light-mode #cert-modal .border-slate-700 { border-color: #334155; }
+        body.light-mode #cert-modal-title { color: #ffffff; }
+        body.light-mode #close-cert-modal { color: #94a3b8; }
+        body.light-mode #close-cert-modal:hover { color: #ffffff; background-color: #334155; }
 
         #terminal-body::-webkit-scrollbar { width: 4px; }
         #terminal-body::-webkit-scrollbar-track { background: transparent; }
@@ -1335,7 +1382,7 @@ System Online. Root privileges granted.</div>
   <span class="text-cyan-400">skills</span>    - Elenca le competenze tecniche
   <span class="text-cyan-400">clear</span>     - Pulisce l'output del terminale
   <span class="text-cyan-400">ping</span>      - Esegue un test di rete (es. ping 127.0.0.1)
-  <span class="text-cyan-400">theme</span>     - Cambia tema (es. theme light, theme dark)
+  <span class="text-cyan-400">theme</span>      - Cambia tema (es. theme light, theme dark)
   <span class="text-cyan-400">matrix</span>    - Inizializza protocollo Matrix
   <span class="text-cyan-400">exit</span>      - Chiude il terminale`;
                 case 'whoami': return 'Waleed Anwar - System Administrator & Computer Engineering Student.<br>Appassionato di reti, cloud architecture e problem-solving.';
